@@ -1,0 +1,197 @@
+
+*............................................................................*
+*Br   10 :Muon_miniPFRelIso_all :                                            *
+*         | Float_t mini PF relative isolation, total (with scaled rho*EA PU corrections)*
+*Entries :  1518370 : Total  Size=   13693723 bytes  File Size  =    5507010 *
+*Baskets :      362 : Basket Size=      88576 bytes  Compression=   2.49     *
+*............................................................................*
+*Br   11 :Muon_miniPFRelIso_chg :                                            *
+*         | Float_t mini PF relative isolation, charged component            *
+*Entries :  1518370 : Total  Size=   13693699 bytes  File Size  =    3880242 *
+*Baskets :      362 : Basket Size=      88576 bytes  Compression=   3.53     *
+*............................................................................*
+*Br   12 :Muon_pfRelIso03_all :                                              *
+*         | Float_t PF relative isolation dR=0.3, total (deltaBeta corrections)*
+*Entries :  1518370 : Total  Size=   13692983 bytes  File Size  =    6069490 *
+*Baskets :      362 : Basket Size=      88576 bytes  Compression=   2.25     *
+*............................................................................*
+*Br   13 :Muon_pfRelIso03_chg :                                              *
+*         | Float_t PF relative isolation dR=0.3, charged component          *
+*Entries :  1518370 : Total  Size=   13692971 bytes  File Size  =    4951454 *
+*Baskets :      362 : Basket Size=      88576 bytes  Compression=   2.76     *
+*............................................................................*
+*Br   14 :Muon_pfRelIso04_all :                                              *
+*         | Float_t PF relative isolation dR=0.4, total (deltaBeta corrections)*
+*Entries :  1518370 : Total  Size=   13692983 bytes  File Size  =    6657342 *
+*Baskets :      362 : Basket Size=      88576 bytes  Compression=   2.06     *
+*............................................................................*
+*Br   15 :Muon_phi  : Float_t phi                                            *
+*Entries :  1518370 : Total  Size=   13688912 bytes  File Size  =    5448892 *
+*Baskets :      362 : Basket Size=      88576 bytes  Compression=   2.51     *
+*............................................................................*
+*Br   16 :Muon_pt   : Float_t pt                                             *
+*Entries :  1518370 : Total  Size=   13688546 bytes  File Size  =    7722430 *
+*Baskets :      362 : Basket Size=      88576 bytes  Compression=   1.77     *
+*............................................................................*
+*Br   17 :Muon_ptErr : Float_t ptError of the muon track                     *
+*Entries :  1518370 : Total  Size=   13689664 bytes  File Size  =    3449032 *
+*Baskets :      362 : Basket Size=      88576 bytes  Compression=   3.97     *
+*............................................................................*
+*Br   18 :Muon_segmentComp : Float_t muon segment compatibility              *
+*Entries :  1518370 : Total  Size=   13691855 bytes  File Size  =    4519816 *
+*Baskets :      362 : Basket Size=      88576 bytes  Compression=   3.03     *
+*............................................................................*
+*Br   19 :Muon_sip3d : Float_t 3D impact parameter significance wrt first PV *
+*Entries :  1518370 : Total  Size=   13689684 bytes  File Size  =    4834536 *
+*Baskets :      362 : Basket Size=      88576 bytes  Compression=   2.83     *
+*............................................................................*
+*Br   20 :Muon_softMva : Float_t soft MVA ID score                           *
+*Entries :  1518370 : Total  Size=   13690386 bytes  File Size  =    2663804 *
+*Baskets :      362 : Basket Size=      88576 bytes  Compression=   5.14     *
+*............................................................................*
+*Br   21 :Muon_tkRelIso :                                                    *
+*         | Float_t Tracker-based relative isolation dR=0.3 for highPt, trkIso/tunePpt*
+*Entries :  1518370 : Total  Size=   13690800 bytes  File Size  =    3054630 *
+*Baskets :      362 : Basket Size=      88576 bytes  Compression=   4.48     *
+*............................................................................*
+*Br   22 :Muon_tunepRelPt : Float_t TuneP relative pt, tunePpt/pt            *
+*Entries :  1518370 : Total  Size=   13691493 bytes  File Size  =    1280942 *
+*Baskets :      362 : Basket Size=      88576 bytes  Compression=  10.68     *
+*............................................................................*
+*Br   23 :Muon_mvaLowPt : Float_t Low pt muon ID score                       *
+*Entries :  1518370 : Total  Size=   13690754 bytes  File Size  =    4520794 *
+*Baskets :      362 : Basket Size=      88576 bytes  Compression=   3.03     *
+*............................................................................*
+*Br   24 :Muon_mvaTTH : Float_t TTH MVA lepton ID score                      *
+*Entries :  1518370 : Total  Size=   13690027 bytes  File Size  =    4519526 *
+*Baskets :      362 : Basket Size=      88576 bytes  Compression=   3.03     *
+*............................................................................*
+*Br   25 :Muon_charge : Int_t electric charge                                *
+*Entries :  1518370 : Total  Size=   13690012 bytes  File Size  =    1377246 *
+*Baskets :      362 : Basket Size=      88576 bytes  Compression=   9.93     *
+*............................................................................*
+*Br   26 :Muon_jetIdx : Int_t index of the associated jet (-1 if none)       *
+*Entries :  1518370 : Total  Size=   13690037 bytes  File Size  =    1636478 *
+*Baskets :      362 : Basket Size=      88576 bytes  Compression=   8.36     *
+*............................................................................*
+*Br   27 :Muon_nStations :                                                   *
+*         | Int_t number of matched stations with default arbitration (segment & track)*
+*Entries :  1518370 : Total  Size=   13691161 bytes  File Size  =    1665800 *
+*Baskets :      362 : Basket Size=      88576 bytes  Compression=   8.21     *
+*............................................................................*
+*Br   28 :Muon_nTrackerLayers : Int_t number of layers in the tracker        *
+*Entries :  1518370 : Total  Size=   13692948 bytes  File Size  =    1977746 *
+*Baskets :      362 : Basket Size=      88576 bytes  Compression=   6.92     *
+*............................................................................*
+*Br   29 :Muon_pdgId :                                                       *
+*         | Int_t PDG code assigned by the event reconstruction (not by MC truth)*
+*Entries :  1518370 : Total  Size=   13689695 bytes  File Size  =    1381888 *
+*Baskets :      362 : Basket Size=      88576 bytes  Compression=   9.90     *
+*............................................................................*
+*Br   30 :Muon_tightCharge :                                                 *
+*         | Int_t Tight charge criterion using pterr/pt of muonBestTrack (0: *
+*         | fail, 2:pass)                                                    *
+*Entries :  1518370 : Total  Size=   13691893 bytes  File Size  =    1056580 *
+*Baskets :      362 : Basket Size=      88576 bytes  Compression=  12.95     *
+*............................................................................*
+*Br   31 :Muon_fsrPhotonIdx : Int_t Index of the associated FSR photon       *
+*Entries :  1518370 : Total  Size=   13692221 bytes  File Size  =    1149982 *
+*Baskets :      362 : Basket Size=      88576 bytes  Compression=  11.90     *
+*............................................................................*
+*Br   32 :Muon_highPtId :                                                    *
+*         | UChar_t high-pT cut-based ID (1 = tracker high pT, 2 = global high pT, which includes tracker high pT)*
+*Entries :  1518370 : Total  Size=    8008051 bytes  File Size  =    1083518 *
+*Baskets :      362 : Basket Size=      54784 bytes  Compression=   7.38     *
+*............................................................................*
+*Br   33 :Muon_highPurity : Bool_t inner track is high purity                *
+*Entries :  1518370 : Total  Size=    8008713 bytes  File Size  =     895254 *
+*Baskets :      362 : Basket Size=      54784 bytes  Compression=   8.94     *
+*............................................................................*
+*Br   34 :Muon_inTimeMuon : Bool_t inTimeMuon ID                             *
+*Entries :  1518370 : Total  Size=    8008700 bytes  File Size  =     894966 *
+*Baskets :      362 : Basket Size=      54784 bytes  Compression=   8.94     *
+*............................................................................*
+*Br   35 :Muon_isGlobal : Bool_t muon is global muon                         *
+*Entries :  1518370 : Total  Size=    8007976 bytes  File Size  =     987846 *
+*Baskets :      362 : Basket Size=      54784 bytes  Compression=   8.10     *
+*............................................................................*
+*Br   36 :Muon_isPFcand : Bool_t muon is PF candidate                        *
+*Entries :  1518370 : Total  Size=    8007977 bytes  File Size  =     975410 *
+*Baskets :      362 : Basket Size=      54784 bytes  Compression=   8.20     *
+*............................................................................*
+*Br   37 :Muon_isTracker : Bool_t muon is tracker muon                       *
+*Entries :  1518370 : Total  Size=    8008342 bytes  File Size  =     889828 *
+*Baskets :      362 : Basket Size=      54784 bytes  Compression=   8.99     *
+*............................................................................*
+*Br   38 :Muon_jetNDauCharged :                                              *
+*         | UChar_t number of charged daughters of the closest jet           *
+*Entries :  1518370 : Total  Size=    8010193 bytes  File Size  =    1494514 *
+*Baskets :      362 : Basket Size=      54784 bytes  Compression=   5.35     *
+*............................................................................*
+*Br   39 :Muon_looseId : Bool_t muon is loose muon                           *
+*Entries :  1518370 : Total  Size=    8007610 bytes  File Size  =     976604 *
+*Baskets :      362 : Basket Size=      54784 bytes  Compression=   8.19     *
+*............................................................................*
+*Br   40 :Muon_mediumId : Bool_t cut-based ID, medium WP                     *
+*Entries :  1518370 : Total  Size=    8007980 bytes  File Size  =    1004646 *
+*Baskets :      362 : Basket Size=      54784 bytes  Compression=   7.96     *
+*............................................................................*
+*Br   41 :Muon_mediumPromptId : Bool_t cut-based ID, medium prompt WP        *
+*Entries :  1518370 : Total  Size=    8010177 bytes  File Size  =    1067710 *
+*Baskets :      362 : Basket Size=      54784 bytes  Compression=   7.50     *
+*............................................................................*
+*Br   42 :Muon_miniIsoId :                                                   *
+*         | UChar_t MiniIso ID from miniAOD selector (1=MiniIsoLoose, 2=MiniIsoMedium, 3=MiniIsoTight, 4=MiniIsoVeryTight)*
+*Entries :  1518370 : Total  Size=    8008424 bytes  File Size  =    1388352 *
+*Baskets :      362 : Basket Size=      54784 bytes  Compression=   5.76     *
+*............................................................................*
+*Br   43 :Muon_multiIsoId :                                                  *
+*         | UChar_t MultiIsoId from miniAOD selector (1=MultiIsoLoose, 2=MultiIsoMedium)*
+*Entries :  1518370 : Total  Size=    8008755 bytes  File Size  =    1116138 *
+*Baskets :      362 : Basket Size=      54784 bytes  Compression=   7.17     *
+*............................................................................*
+*Br   44 :Muon_mvaId :                                                       *
+*         | UChar_t Mva ID from miniAOD selector (1=MvaLoose, 2=MvaMedium, 3=MvaTight, 4=MvaVTight, 5=MvaVVTight)*
+*Entries :  1518370 : Total  Size=    8006955 bytes  File Size  =    1339720 *
+*Baskets :      362 : Basket Size=      54784 bytes  Compression=   5.97     *
+*............................................................................*
+*Br   45 :Muon_mvaLowPtId :                                                  *
+*         | UChar_t Low Pt Mva ID from miniAOD selector (1=LowPtMvaLoose, 2=LowPtMvaMedium)*
+*Entries :  1518370 : Total  Size=    8008758 bytes  File Size  =     817542 *
+*Baskets :      362 : Basket Size=      54784 bytes  Compression=   9.79     *
+*............................................................................*
+*Br   46 :Muon_pfIsoId :                                                     *
+*         | UChar_t PFIso ID from miniAOD selector (1=PFIsoVeryLoose, 2=PFIsoLoose, 3=PFIsoMedium, 4=PFIsoTight, 5=PFIsoVeryTight, 6=PFIsoVeryVeryTight)*
+*Entries :  1518370 : Total  Size=    8007724 bytes  File Size  =    1480620 *
+*Baskets :      362 : Basket Size=      54784 bytes  Compression=   5.40     *
+*............................................................................*
+*Br   47 :Muon_puppiIsoId :                                                  *
+*         | UChar_t PuppiIsoId from miniAOD selector (1=Loose, 2=Medium, 3=Tight)*
+*Entries :  1518370 : Total  Size=    8008748 bytes  File Size  =    1299114 *
+*Baskets :      362 : Basket Size=      54784 bytes  Compression=   6.16     *
+*............................................................................*
+*Br   48 :Muon_softId : Bool_t soft cut-based ID                             *
+*Entries :  1518370 : Total  Size=    8007244 bytes  File Size  =     946714 *
+*Baskets :      362 : Basket Size=      54784 bytes  Compression=   8.45     *
+*............................................................................*
+*Br   49 :Muon_softMvaId : Bool_t soft MVA ID                                *
+*Entries :  1518370 : Total  Size=    8008333 bytes  File Size  =    1093212 *
+*Baskets :      362 : Basket Size=      54784 bytes  Compression=   7.32     *
+*............................................................................*
+*Br   50 :Muon_tightId : Bool_t cut-based ID, tight WP                       *
+*Entries :  1518370 : Total  Size=    8007614 bytes  File Size  =    1045188 *
+*Baskets :      362 : Basket Size=      54784 bytes  Compression=   7.65     *
+*............................................................................*
+*Br   51 :Muon_tkIsoId : UChar_t TkIso ID (1=TkIsoLoose, 2=TkIsoTight)       *
+*Entries :  1518370 : Total  Size=    8007629 bytes  File Size  =    1207808 *
+*Baskets :      362 : Basket Size=      54784 bytes  Compression=   6.62     *
+*............................................................................*
+*Br   52 :Muon_triggerIdLoose : Bool_t TriggerIdLoose ID                     *
+*Entries :  1518370 : Total  Size=    8010164 bytes  File Size  =     950190 *
+*Baskets :      362 : Basket Size=      54784 bytes  Compression=   8.42     *
+*............................................................................*
+*Br   53 :Muon_cleanmask :                                                   *
+*         | UChar_t simple cleaning mask with priority to leptons            *
+*Entries :  1518370 : Total  Size=    8008367 bytes  File Size  =    1003108 *
+*Baskets :      362 : Basket Size=      54784 bytes  Compression=   7.98     *
+*............................................................................*
