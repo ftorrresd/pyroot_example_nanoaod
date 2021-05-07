@@ -1,10 +1,10 @@
-# Sanila's example code
+# PyROOT Example on CMS' NanoAOD
 
-Simple exampleon how to acess CMS' NanoAOD files and read some information from it.
+Simple example on how to access CMS' NanoAOD files and read some information from it.
 
 Assuming CMSSW enviorment access. Should work from `lxplus`.
 
-![Alt Text](https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif)
+![pyroot_example_nanoaod](https://github.com/ftorresd/pyroot_example_nanoaod/raw/main/content/pyroot_example_nanoaod.gif)
 
 ## Setup
 
