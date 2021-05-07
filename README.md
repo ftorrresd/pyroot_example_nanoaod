@@ -2,7 +2,11 @@
 
 Simple example on how to access CMS' NanoAOD files and read some information from it.
 
-Assuming CMSSW enviorment access. Should work from `lxplus`.
+Assuming CMSSW environment is available. One should also assume that the user have GRID certificate registered to CMS' VO.
+
+More info:
+- https://twiki.cern.ch/twiki/bin/view/CMSPublic/WorkBookStartingGrid
+- https://twiki.cern.ch/twiki/bin/view/CMSPublic/SWGuideLcgAccess
 
 ![pyroot_example_nanoaod](https://github.com/ftorresd/pyroot_example_nanoaod/raw/main/content/pyroot_example_nanoaod.gif)
 

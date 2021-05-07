@@ -7,7 +7,7 @@ ROOT.PyConfig.IgnoreCommandLineOptions = False
 ROOT.gROOT.SetBatch(True)
 
 # Config
-max_events = 50000 # max number of events to be processed
+max_events = 25000 # max number of events to be processed
 
 # Declare histograms
 # muons p_T
@@ -21,8 +21,8 @@ h_nmuon = ROOT.TH1F("h_nmuon", "; Number of muons ; Events", 5, 0, 5)
 h_nmuon.Sumw2() 
 
 # Load ROOT file 
-# data_file = ROOT.TFile("root://cms-xrd-global.cern.ch//store/data/Run2018D/SingleMuon/NANOAOD/UL2018_MiniAODv1_NanoAODv2-v1/280000/0BF2854F-C799-2F41-A0F4-0274DC311372.root") # not why this one is not working...
-data_file = ROOT.TFile("/eos/cms/store/data/Run2018D/SingleMuon/NANOAOD/UL2018_MiniAODv1_NanoAODv2-v1/280000/0BF2854F-C799-2F41-A0F4-0274DC311372.root")
+data_file = ROOT.TFile.Open("root://cms-xrd-global.cern.ch///store/data/Run2018D/SingleMuon/NANOAOD/UL2018_MiniAODv1_NanoAODv2-v1/280000/0BF2854F-C799-2F41-A0F4-0274DC311372.root")
+# data_file = ROOT.TFile.Open("/eos/cms/store/data/Run2018D/SingleMuon/NANOAOD/UL2018_MiniAODv1_NanoAODv2-v1/280000/0BF2854F-C799-2F41-A0F4-0274DC311372.root")
 
 # total number of events in the file
 n_events = data_file.Events.GetEntries() 
@@ -43,15 +43,18 @@ for ievt, evt in tqdm.tqdm(enumerate(data_file.Events), desc ="Events", total= n
 
     # loop over muons
     for i_muon in range(evt.nMuon):
-
         h_muon_pt.Fill(evt.Muon_pt[i_muon])
 
 
 # Save histogram to a file
 # Open a ROOT file and save the formula, function and histogram
-output_file = ROOT.TFile( 'output_file.root', 'RECREATE' )
+output_file = ROOT.TFile( 'output_file.root', 'RECREATE')
+
+# Write histograms to file
 h_muon_pt.Write()
 h_nmuon.Write()
+
+# Close file
 output_file.Close()
 
 print "\nOutput histograms have been saved output_file.root"
