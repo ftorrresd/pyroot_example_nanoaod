@@ -2,9 +2,9 @@
 
 Simple example on how to access CMS' NanoAOD files and read some information from it.
 
-Assuming CMSSW environment is available. One should also assume that the user have GRID certificate registered to CMS' VO.
+**Note:** Assuming (1) CMSSW environment is available, (2) the user have GRID certificate (3) registered to CMS' VO.
 
-More info:
+**More info:**
 - https://twiki.cern.ch/twiki/bin/view/CMSPublic/WorkBookStartingGrid
 - https://twiki.cern.ch/twiki/bin/view/CMSPublic/SWGuideLcgAccess
 
