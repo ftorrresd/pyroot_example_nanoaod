@@ -33,8 +33,12 @@ Only once per session.
 source setup_env.sh
 ```
 
-## Run analyser
+## Run 
 
 ```
 python analyser.py
 ```
+
+## Output
+
+Histograms will be saved at `output_file.root`.
