@@ -6,18 +6,28 @@ ROOT.PyConfig.DisableRootLogon = True
 ROOT.PyConfig.IgnoreCommandLineOptions = False
 ROOT.gROOT.SetBatch(True)
 
+# Load source files chains
+from source_files import data_chain 
+from source_files import mc_chain 
+
 # Config
-max_events = 25000 # max number of events to be processed
+max_events = 25000 # max number of events to be processed -> set to -1 to proccess all events
+# max_events = -1 # max number of events to be processed -> set to -1 to proccess all events
 
 
 #calculating weight of MC data
-crosssection = 20508.9
-luminosity = 1
-W_mc = (crosssection*luminosity)/max_events
-W_mc = 0.82
+# x-sec REF: 
+# https://twiki.cern.ch/twiki/bin/viewauth/CMS/StandardModelCrossSectionsat13TeV
+# https://pdglive.lbl.gov/Particle.action?node=S043&init=0
+
+W_crosssection = 20508.9*1E-3 # in fb
+br_W_to_leptons = 0.10785 #this is the mean value of br to muon+nu and electron+nu
+luminosity = 1 # in fb^-1
+W_mc = (W_crosssection*br_W_to_leptons*luminosity)/max_events
+# W_mc = 0.82
 
 #weight for CMS data
-W=1
+W = 1
 
 # Declare histograms
 # muons p_T
@@ -71,19 +81,7 @@ h_MmM2.Sumw2()
 h_Mmm = ROOT.TH1F("h_Mmm","Invariant mass of two muons", 50, 70, 100)
 h_Mmm.Sumw2()
 
-# Create a Chain of filles to analyze
-data_chain = ROOT.TChain("Events")
-data_chain.Add("/eos/cms/store/data/Run2018D/SingleMuon/NANOAOD/UL2018_MiniAODv1_NanoAODv2-v1/280000/0BF2854F-C799-2F41-A0F4-0274DC311372.root")
 
-mc_chain = ROOT.TChain("Events")
-mc_chain.Add("root://cms-xrd-global.cern.ch///store/mc/RunIISummer20UL18NanoAODv2/WJetsToLNu_TuneCP5_13TeV-madgraphMLM-pythia8/NANOAODSIM/106X_upgrade2018_realistic_v15_L1v1-v1/00000/B81103CC-8168-3F46-AEC4-6CEF3012FC8A.root")
-
-# # Load ROOT file g
-# #data_file = ROOT.TFile.Open("root://cms-xrd-global.cern.ch///store/data/Run2018D/SingleMuon/NANOAOD/UL2018_MiniAODv1_NanoAODv2-v1/280000/0BF2854F-C799-2F41-A0F4-0274DC311372.root")
-# data_file = ROOT.TFile.Open("/eos/cms/store/data/Run2018D/SingleMuon/NANOAOD/UL2018_MiniAODv1_NanoAODv2-v1/280000/0BF2854F-C799-2F41-A0F4-0274DC311372.root") #(REAL CMS DATA)
-
-# #MC data file
-# mc_file = ROOT.TFile.Open("root://cms-xrd-global.cern.ch///store/mc/RunIISummer20UL18NanoAODv2/WJetsToLNu_TuneCP5_13TeV-madgraphMLM-pythia8/NANOAODSIM/106X_upgrade2018_realistic_v15_L1v1-v1/00000/B81103CC-8168-3F46-AEC4-6CEF3012FC8A.root")
 
 # total number of events in the file
 n_events1 = data_chain.GetEntries()  #(REAL CMS DATA)
@@ -98,6 +96,21 @@ if max_events >= 0:
 n_events2_for_tqdm = n_events2
 if max_events >= 0:
     n_events2_for_tqdm = max_events 
+
+
+# calculating weight of MC data
+crosssection = 20508.9 # in fb
+luminosity = 1 # in fb^-1
+W_mc = (crosssection*luminosity*3.0)/n_events2_for_tqdm
+# W_mc = 0.82
+
+#weight for CMS data
+W = 1.0
+
+print "--> Weights:"
+print "----> MC: " + str(W_mc) 
+print "----> Data: "+ str(W)
+
 
 # loop over events and fill histograms
 counterA = 0
@@ -131,18 +144,18 @@ for ievt, evt in tqdm.tqdm(enumerate(data_chain), desc ="Events", total= n_event
                       h_MET_phi_1.Fill(evt.MET_phi,W)
                       h_MET_pt_1.Fill(evt.MET_pt,W)
                       h_nmuon_1.Fill(evt.nMuon,W)   # per event info
-                      counterA+=1
+                      counterA+=W
                     else:
-                      counterD+=1
+                      counterD+=W
                   else:
                     if (m_mM1 > 60 and m_mM1 < 200):
-                      counterB+=1
+                      counterB+=W
                     else:
-                      counterC+=1
-                    counter1+=1  
+                      counterC+=W
+                    counter1+=W
                   break
     
-    count1+=1          
+    count1+=W        
     
 print(counterA)  
 print(counterB)
@@ -164,6 +177,17 @@ for ievt, evt in tqdm.tqdm(enumerate(mc_chain), desc ="Events", total= n_events2
     # condition to stop event processing, when max_events is reached
     if ievt+1 > max_events and max_events > 0:
         break
+
+    # DUMMY STUFF
+    print "-----------------------------"
+    print "nLHE: " + str(evt.nLHEPart)
+    for lhe_part in evt.LHEPart_pdgId:
+        print "lhe_part: " + str(lhe_part)
+    print "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+
+    # END DUMMY STUFF
+
+
     # loop over muons 
     if evt.nMuon>=1:
       if evt.HLT_IsoMu24==1:         
@@ -184,18 +208,18 @@ for ievt, evt in tqdm.tqdm(enumerate(mc_chain), desc ="Events", total= n_events2
                       h_MET_phi_2.Fill(evt.MET_phi,W_mc)
                       h_MET_pt_2.Fill(evt.MET_pt,W_mc)
                       h_nmuon_2.Fill(evt.nMuon,W_mc)
-                      countera+=1
+                      countera+=W_mc
                     else:
-                      counterd+=1
+                      counterd+=W_mc
                   else:
                     if (m_mM2 > 60 and m_mM2 < 200):
-                      counterb+=1
+                      counterb+=W_mc
                     else:
-                      counterc+=1
-                    counter2+=1  
+                      counterc+=W_mc
+                    counter2+=W_mc
                   break
                  
-    count2+=1                    
+    count2+=W_mc                   
 
 print(countera)  
 print(counterb)
