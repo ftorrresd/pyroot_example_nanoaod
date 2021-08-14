@@ -101,7 +101,7 @@ if max_events >= 0:
 # calculating weight of MC data
 crosssection = 20508.9 # in fb
 luminosity = 1 # in fb^-1
-W_mc = (crosssection*luminosity*3.0)/n_events2_for_tqdm
+W_mc = (crosssection*luminosity)/(n_events2_for_tqdm/3.0)
 # W_mc = 0.82
 
 #weight for CMS data
