@@ -48,38 +48,38 @@ h_MmM2.SetTitle("Signal MC")
 
 h_muon_pt_1.SetMarkerStyle(ROOT.kFullCircle)
 h_muon_pt_2.SetLineWidth(2)
-h_muon_pt_2.SetFillColorAlpha(ROOT.kBlue, 0.35)
+h_muon_pt_2.SetFillColorAlpha(ROOT.kOrange-2, 0.35)
 
 h_muon_phi_1.SetMarkerStyle(ROOT.kFullCircle)
 h_muon_phi_2.SetLineWidth(2)
-h_muon_phi_2.SetFillColorAlpha(ROOT.kBlue, 0.35)
+h_muon_phi_2.SetFillColorAlpha(ROOT.kOrange-2, 0.35)
 
 h_MmM1.SetMarkerStyle(ROOT.kFullCircle)
 h_MmM2.SetLineWidth(2)
-h_MmM2.SetFillColorAlpha(ROOT.kBlue, 0.75)
+h_MmM2.SetFillColorAlpha(ROOT.kOrange-2, 0.75)
 
 h_MET_pt_1.SetMarkerStyle(ROOT.kFullCircle)
 h_MET_pt_2.SetLineWidth(2)
-h_MET_pt_2.SetFillColorAlpha(ROOT.kBlue, 0.35)
+h_MET_pt_2.SetFillColorAlpha(ROOT.kOrange-2, 0.35)
 
 h_MET_phi_1.SetMarkerStyle(ROOT.kFullCircle)
 h_MET_phi_2.SetLineWidth(2)
-h_MET_phi_2.SetFillColorAlpha(ROOT.kBlue, 0.35)
+h_MET_phi_2.SetFillColorAlpha(ROOT.kOrange-2, 0.35)
 
 h_nmuon_1.SetMarkerStyle(ROOT.kFullCircle)
 h_nmuon_2.SetLineWidth(2)
-h_nmuon_2.SetFillColorAlpha(ROOT.kBlue, 0.35)
+h_nmuon_2.SetFillColorAlpha(ROOT.kOrange-2, 0.35)
 
 
 c1 = ROOT.TCanvas("c1","c1",1200,800)
 
 
-h_hs_M = ROOT.THStack("h_hs_M","MC and CMS data for transverse mass")
-h_hs_muon_pt = ROOT.THStack("h_hs_muon_pt","MC and CMS data for muon_pt")
-h_hs_muon_phi = ROOT.THStack("h_hs_muon_phi","MC and CMS data for muon_phi")
-h_hs_MET_pt = ROOT.THStack("h_hs_MET_pt","MC and CMS data for MET_pt")
-h_hs_MET_phi = ROOT.THStack("h_hs_MET_phi","MC and CMS data for MET_phi")
-h_hs_nmuon = ROOT.THStack("h_hs_nmuon","MC and CMS data for nmuon")
+h_hs_M = ROOT.THStack("h_hs_M","; m_{T} (GeV);Events")
+h_hs_muon_pt = ROOT.THStack("h_hs_muon_pt","; Lepton p_{T} (GeV);Events")
+h_hs_muon_phi = ROOT.THStack("h_hs_muon_phi","; Lepton #phi;Events")
+h_hs_MET_pt = ROOT.THStack("h_hs_MET_pt","; Missing E_{T} (GeV);Events")
+h_hs_MET_phi = ROOT.THStack("h_hs_MET_phi","; Missing E_{T} #phi;Events")
+h_hs_nmuon = ROOT.THStack("h_hs_nmuon","; Number of muons;Events")
 
 h_hs_M.Add(h_MmM1, "E1")
 h_hs_M.Add(h_MmM2, "hist")

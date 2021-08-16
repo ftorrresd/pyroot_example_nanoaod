@@ -207,7 +207,8 @@ for ievt, evt in tqdm.tqdm(enumerate(mc_chain), desc ="Events"):
     # filter only MC for muon + nu decay channel
     is_muon_decay = False
     for lhe_part in range(evt.nLHEPart):
-      if abs(evt.LHEPart_pdgId[lhe_part]) == 13:
+      if abs(evt.LHEPart_pdgId[lhe_part]) == 13: # MUON DECAY
+      # if abs(evt.LHEPart_pdgId[lhe_part]) == 11: # ELECTRON DECAY
         is_muon_decay = True
 
     if is_muon_decay:
