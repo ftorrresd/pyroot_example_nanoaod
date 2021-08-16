@@ -6,4 +6,5 @@
 - Source files loading (TChain) isolated in anoter file (`source_files.py`).
 - Effective x-sec properly weighted by PDG values.
 - Counters scaled to event weight.
-- MC content description. 
+- MC content description.
+- Filter MC events for muon decays only. 
